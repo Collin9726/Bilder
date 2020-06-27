@@ -9,8 +9,13 @@
             <div class="jumbotron">
                 <div class="row display-flex">
                     {% for query_set in pics %}
-                         {% for photo in query_set %}                
-                             <div class="col-xs-12 col-sm-6 col-md-4">
+                         {% for photo in query_set %} 
+                            {% if forloop.first %}  
+                                <div class="col-xs-12">
+                                    <h2>{{photo.image_category | title}}</h2>                                                                        
+                                </div>
+                            {% endif %}             
+                             <div class="col-xs-12 col-sm-6 col-md-4 cards">
                                  <div class="card">
                                      <img class="card-img-top" src="{{photo.image_url.url}}" alt="Card image cap">
                                      <div class="card-body">

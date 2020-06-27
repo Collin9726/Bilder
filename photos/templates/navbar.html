@@ -25,10 +25,11 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">Frontend</a></li>                
+                  {% for category in categories %}
+                  <li><a href="#">{{category.category_name | title}}</a></li>
+                  {% empty %}
+
+                  {% endfor %}                                 
                   <li role="separator" class="divider"></li>
                   <li><a href="#">All categories</a></li>              
                 </ul>
@@ -36,10 +37,11 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">Frontend</a></li>                
+                  {% for location in locations %}
+                  <li><a href="#">{{location.location_name | title}}</a></li>
+                  {% empty %}
+
+                  {% endfor %}             
                   <li role="separator" class="divider"></li>
                   <li><a href="#">All locations</a></li>              
                 </ul>
