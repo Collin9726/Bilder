@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 photo-page">
+            <div class="jumbotron jumbo-photo">
+                <div class="row display-flex">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="card">
+                            <img class="card-img-top" src="{{photo.image_url.url}}" alt="{{photo.image_name}}">                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="jumbotron jumbo-txt full-height">
+                            <h2><b>{{photo.image_name}}</b></h2>
+                            <h4><b>{{photo.image_category}}</b></h4>
+                            <h4 class="text-muted">{{photo.image_location}}</h4>
+                            <p><b>"</b>{{photo.image_description}}<b>"</b></p><br>
+                            <h5><b>{{photo.post_date}}</b></h5>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

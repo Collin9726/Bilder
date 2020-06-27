@@ -181,14 +181,14 @@ html, body{
     font-weight: bolder;
 }
 
-.card{
+.home-page .card{
     color: rgb(45, 117, 111);
     border: 2px solid rgb(45, 117, 111);
     padding: 1em;
     height: 100%;
 }
 
-.card img {
+.home-page .card img {
     width: 100%;
     height: 30vh;
     object-fit: cover;
@@ -205,4 +205,33 @@ html, body{
 
 .cards{
     margin-bottom: 1em;
+}
+
+.photo-page .card{    
+    border: 2px solid rgb(45, 117, 111);
+    padding: 1em;    
+}
+
+.photo-page .card img {
+    width: 100%;    
+    object-fit: cover;
+}
+
+.home-page .card img:hover {
+    opacity: 0.7;
+}
+
+.jumbo-photo{
+    padding-top: 6em;
+    background-color: rgb(227, 238, 237);
+}
+
+.jumbo-txt{
+    /* padding-top: 6em; */
+    background-color: rgb(214, 233, 231);
+}
+
+
+.jumbo-txt p{
+    font-size: medium;
 }

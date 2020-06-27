@@ -18,3 +18,12 @@ def home(request):
     
     return render(request, 'all.html', {"pics": pics, "categories": categories, "locations": locations})
 
+
+def display_photo(request, photo_id):
+    categories=Category.objects.all()
+    locations=Location.objects.all()
+    try:
+        photo = Image.objects.get(id = photo_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"photo.html", {"photo":photo, "categories": categories, "locations": locations})

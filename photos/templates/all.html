@@ -17,7 +17,7 @@
                             {% endif %}             
                              <div class="col-xs-12 col-sm-6 col-md-4 cards">
                                  <div class="card">
-                                     <img class="card-img-top" src="{{photo.image_url.url}}" alt="Card image cap">
+                                     <a href="../photo/{{photo.id}}"><img class="card-img-top" src="{{photo.image_url.url}}" alt="{{photo.image_name}}"></a>
                                      <div class="card-body">
                                          <h4 class="card-title">{{photo.image_name}}</h4>
                                          <h5 class="card-subtitle mb-2 text-muted">{{photo.post_date}}</h5>                                                                    
