@@ -1,8 +1,28 @@
-{%extends './base.html'%}
+{%extends 'base.html'%}
 
 {% block content %}
 {{block.super}}
 
-<h1 class="text-center text-primary">Welcome</h1>
+<div class="container-fluid full-height">
+    <div class="row display-flex full-height">
+        <div class="col-xs-12 col-sm-9 welcome-img full-height">
+            <!--bg_picture-->            
+        </div>
+        <div class="col-xs-12 col-sm-3 welcome-txt">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="jumbotron">
+                        <h4>Collin Devtest's</h4>
+                        <hr>
+                        <h1 class="font-thick">Bilder</h1>
+                        <h2>My Gallery Application</h2>
+                        <br>
+                        <button class="btn">View photos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
