@@ -56,8 +56,10 @@ class Image(models.Model):
     def update_image(self):
         pass
 
+    @classmethod
     def get_image_by_id(cls,id):
-        pass
+        result = cls.objects.get(id = id)
+        return result
 
     @classmethod
     def search_images(cls, cat):

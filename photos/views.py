@@ -33,7 +33,7 @@ def display_photo(request, photo_id):
     categories=Category.objects.all()
     locations=Location.objects.all()
     try:
-        photo = Image.objects.get(id = photo_id)
+        photo = Image.get_image_by_id(photo_id)
     except Image.DoesNotExist:
         raise Http404()
     
