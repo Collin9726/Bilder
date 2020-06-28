@@ -42,3 +42,13 @@ class ImageTestClass(TestCase):
         photo.update_image()
         photo_1 = Image.objects.get(image_description = 'messi is back playing football')
         self.assertEqual(photo_1.image_name, 'otherName')
+
+
+    # Testing get_image_by_id Method
+    def test_get_image_by_id_method(self):
+        self.this_image.save_image()
+        this_id = Image.objects.get(image_name = 'myimage').id
+        photo = Image.get_image_by_id(this_id)        
+        self.assertEqual(self.this_image, photo)
+
+    
