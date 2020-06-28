@@ -87,7 +87,7 @@ def display_location(request, loc_id):
     except Location.DoesNotExist:
         raise Http404()
 
-    photos=Image.objects.filter(image_location = loc)
+    photos=Image.filter_by_location(loc)
 
     return render(request,"location.html", {"photos":photos, "location":loc, "categories": categories, "locations": locations})
 
