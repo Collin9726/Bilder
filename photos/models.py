@@ -59,8 +59,10 @@ class Image(models.Model):
     def get_image_by_id(cls,id):
         pass
 
-    def search_image(cls, category):
-        pass
+    @classmethod
+    def search_images(cls, cat):
+        photos = cls.objects.filter(image_category=cat)
+        return photos    
 
     def filter_by_location(cls, location):
         pass

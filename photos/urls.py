@@ -9,6 +9,7 @@ urlpatterns=[
     url(r'^all-categories/$', views.all_categories, name = 'all_categories'),
     url(r'^photo/(\d+)',views.display_photo,name = 'display_photo'),
     url(r'^category/(\d+)',views.display_category,name = 'display_category'),
+    url(r'^search/', views.search_categories, name='search_categories'),
 ]
 
 if settings.DEBUG:

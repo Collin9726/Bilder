@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.exceptions import ObjectDoesNotExist
 from .models import Image, Category, Location
 
 # Create your views here.
@@ -33,7 +34,7 @@ def display_photo(request, photo_id):
     locations=Location.objects.all()
     try:
         photo = Image.objects.get(id = photo_id)
-    except DoesNotExist:
+    except Image.DoesNotExist:
         raise Http404()
     return render(request,"photo.html", {"photo":photo, "categories": categories, "locations": locations})
 
@@ -43,9 +44,32 @@ def display_category(request, cat_id):
     locations=Location.objects.all()
     try:
         cat = Category.objects.get(id = cat_id)
-    except DoesNotExist:
+    except Category.DoesNotExist:
         raise Http404()
 
     photos=Image.objects.filter(image_category = cat)
 
     return render(request,"category.html", {"photos":photos, "category":cat, "categories": categories, "locations": locations})
+
+
+def search_categories(request):
+    categories=Category.objects.all()
+    locations=Location.objects.all()
+
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")        
+        cat=None
+        try:
+            cat = Category.objects.get(category_name__icontains=search_term)            
+        except Category.DoesNotExist:
+            pass        
+        
+        searched_photos = Image.search_images(cat)
+
+        message = f"{search_term}"
+
+        return render(request, 'search.html',{"message":message, "photos": searched_photos, "categories": categories, "locations": locations})
+
+    else:
+        blank_message = "You haven't searched for any term."
+        return render(request, 'search.html',{"blank_message":blank_message, "categories": categories, "locations": locations})

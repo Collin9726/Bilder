@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 home-page">
+            <div class="jumbotron">
+                <div class="row display-flex">   
+                    {% if blank_message %}
+                        <div class="col-xs-12">
+                            <div class="jumbotron jumbo-txt">
+                                <h2>{{blank_message}}</h2>
+                                <h4>Browse categories <a href="../all-categories">here.</h4>
+                            </div>
+                        </div>
+                    {% else %}
+                        {% if photos%}
+                        
+                        {% else %}
+                        <div class="col-xs-12">
+                            <div class="jumbotron jumbo-txt">
+                                <h2>Your search '{{message}}' did not match any category.</a></h2>
+                                <h4>Browse categories <a href="../all-categories">here.</h4>
+                            </div>
+                        </div>
+                        {% endif %}  
+                    {% endif %} 
+
+                    {% if photos %}
+                        {% for photo in photos %}  
+                        {% if forloop.first %}  
+                            <div class="col-xs-12">
+                                <h2>{{photo.image_category | title}}</h2>                                                                        
+                            </div>
+                        {% endif %}
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 cards">
+                            <div class="card">
+                                <a href="../photo/{{photo.id}}"><img class="card-img-top" src="{{photo.image_url.url}}" alt="{{photo.image_name}}"></a>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{photo.image_name}}</h4>
+                                    <h5 class="card-subtitle mb-2 text-muted">{{photo.post_date}}</h5>                                                                    
+                                </div>
+                            </div>
+                        </div>            
+                            
+                        {% empty %}
+                
+                        {% endfor %}
+                    {% endif %}
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
