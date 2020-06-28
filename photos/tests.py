@@ -25,3 +25,11 @@ class ImageTestClass(TestCase):
         self.this_image.save_image()
         photos = Image.objects.all()
         self.assertTrue(len(photos) > 0)
+
+    # Testing Delete Method
+    def test_delete_image_method(self):
+        self.this_image.save_image()
+        photo = Image.objects.get(id = 1)
+        photo.delete_image()
+        photos = Image.objects.all()
+        self.assertTrue(len(photos) == 0)
