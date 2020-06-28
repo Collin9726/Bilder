@@ -11,6 +11,7 @@ urlpatterns=[
     url(r'^category/(\d+)',views.display_category,name = 'display_category'),
     url(r'^search/', views.search_categories, name='search_categories'),
     url(r'^location/(\d+)',views.display_location,name = 'display_location'),
+    url(r'^all-locations/$', views.all_locations, name = 'all_locations'),
 ]
 
 if settings.DEBUG:

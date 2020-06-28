@@ -87,3 +87,14 @@ def display_location(request, loc_id):
     photos=Image.objects.filter(image_location = loc)
 
     return render(request,"location.html", {"photos":photos, "location":loc, "categories": categories, "locations": locations})
+
+
+def all_locations(request):
+    pics=[]
+    categories=Category.objects.all()
+    locations=Location.objects.all()
+    for loc in locations:
+        photos=Image.objects.filter(image_location = loc)
+        pics.append(photos)
+    
+    return render(request, 'all-locations.html', {"pics": pics, "categories": categories, "locations": locations})
