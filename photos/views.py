@@ -73,3 +73,17 @@ def search_categories(request):
     else:
         blank_message = "You haven't searched for any term."
         return render(request, 'search.html',{"blank_message":blank_message, "categories": categories, "locations": locations})
+
+
+
+def display_location(request, loc_id):
+    categories=Category.objects.all()
+    locations=Location.objects.all()
+    try:
+        loc = Location.objects.get(id = loc_id)
+    except Location.DoesNotExist:
+        raise Http404()
+
+    photos=Image.objects.filter(image_location = loc)
+
+    return render(request,"location.html", {"photos":photos, "location":loc, "categories": categories, "locations": locations})

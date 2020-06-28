@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 home-page">
+            <div class="jumbotron">
+                <div class="row display-flex">
+                    <div class="col-xs-12">
+                        <h2><b>{{location.location_name}}</b></h2>
+                        <hr>
+                    </div>
+                    {% for photo in photos %}  
+
+                    <div class="col-xs-12 col-sm-6 col-md-4 cards">
+                        <div class="card">
+                            <a href="../photo/{{photo.id}}"><img class="card-img-top" src="{{photo.image_url.url}}" alt="{{photo.image_name}}"></a>
+                            <div class="card-body">
+                                <h4 class="card-title">{{photo.image_name}}</h4>
+                                <h5 class="card-subtitle mb-2 text-muted">{{photo.post_date}}</h5>                                                                    
+                            </div>
+                        </div>
+                    </div>            
+                        
+                    {% empty %}
+             
+                    {% endfor %}
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
