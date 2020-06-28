@@ -2,6 +2,48 @@ from django.test import TestCase
 from .models import Image, Location, Category
 
 # Create your tests here.
+
+class LocationTestClass(TestCase):
+    # Set up method
+    def setUp(self):
+        self.this_location = Location(location_name='Kisumu')
+
+    def tearDown(self):
+        Location.objects.all().delete()
+
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.this_location,Location))
+
+    # Testing Save Method
+    def test_save_location_method(self):
+        self.this_location.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
+
+    # Testing Delete Method
+    def test_delete_location_method(self):
+        self.this_location.save_location()
+        location = Location.objects.get(location_name = 'Kisumu')
+        location.delete_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) == 0)
+
+    # Testing Update Method
+    def test_update_location_method(self):
+        self.this_location.save_location()
+        location = Location.objects.get(location_name = 'Kisumu')        
+        location.location_name = 'otherPlace'
+        location.update_location()
+        query_set = Location.objects.all()[:1]
+        new_location=None
+        for place in query_set:
+            new_location = place
+        self.assertEqual(new_location.location_name, 'otherPlace')
+    
+
+
+
 class ImageTestClass(TestCase):
     # Set up method
     def setUp(self):
