@@ -14,7 +14,7 @@ class Location(models.Model):
         self.delete()
 
     def update_location(self):
-        pass
+        self.save()
 
 
 
@@ -31,13 +31,13 @@ class Category(models.Model):
         self.delete()
 
     def update_category(self):
-        pass
+        self.save()
 
 
 
 class Image(models.Model):    
     post_date = models.DateTimeField(auto_now_add=True)
-    image_url = models.ImageField(upload_to = 'posts/')
+    image_url = models.ImageField(upload_to = 'posts/', blank=True)
     image_name = models.CharField(max_length =30)
     image_description = models.TextField()
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -54,7 +54,7 @@ class Image(models.Model):
         self.delete()
 
     def update_image(self):
-        pass
+        self.save()
 
     @classmethod
     def get_image_by_id(cls,id):
