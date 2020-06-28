@@ -59,4 +59,13 @@ class ImageTestClass(TestCase):
             photo = pic        
         self.assertEqual(self.this_image, photo)
 
+    # Testing search_images Method
+    def test_search_images_method(self):
+        self.this_image.save_image()        
+        query_set = Image.search_images(self.this_category)
+        photo=None
+        for pic in query_set:
+            photo = pic        
+        self.assertEqual(self.this_image, photo)
+
     
