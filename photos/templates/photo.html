@@ -14,12 +14,15 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <div class="jumbotron jumbo-txt full-height">
+                        <div class="jumbotron jumbo-txt full-height">                            
                             <h2><b>{{photo.image_name}}</b></h2>
                             <h4><b>{{photo.image_category}}</b></h4>
                             <h4 class="text-muted">{{photo.image_location}}</h4>
                             <p><b>"</b>{{photo.image_description}}<b>"</b></p><br>
                             <h5><b>{{photo.post_date}}</b></h5>
+                            <input type="text" value="{{photo_link}}" id="photoLink" class="offscreen" aria-hidden="true">
+                            <div class="copy-alert"></div>
+                            <button class="btn" id="shareButton" onclick="copyFunction()"><b>Share </b><span class="fa fa-share-alt"></span></button>                            
                         </div>
                     </div>
                 </div>                

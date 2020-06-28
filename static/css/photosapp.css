@@ -235,3 +235,14 @@ html, body{
 .jumbo-txt p{
     font-size: medium;
 }
+
+.offscreen {
+    position: absolute;
+    left: -999em;
+}
+
+.alert {    
+    background-color: rgb(164, 192, 192);
+    color: rgb(6, 41, 33);
+}
+

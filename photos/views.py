@@ -36,7 +36,10 @@ def display_photo(request, photo_id):
         photo = Image.objects.get(id = photo_id)
     except Image.DoesNotExist:
         raise Http404()
-    return render(request,"photo.html", {"photo":photo, "categories": categories, "locations": locations})
+    
+    photo_link=f'http://127.0.0.1:8000/photo/{photo.id}'
+
+    return render(request,"photo.html", {"photo":photo, "categories": categories, "locations": locations, "photo_link": photo_link})
 
 
 def display_category(request, cat_id):
