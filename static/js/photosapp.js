@@ -7,11 +7,10 @@ function copyFunction() {
     copyLink.setSelectionRange(0, 99999); /*For mobile devices*/
   
     /* Copy the text inside the text field */
-    document.execCommand("copy");
-  
-    /* Alert the copied text */
-    // alert("Copied the text: " + copyLink.value);
+    document.execCommand("copy"); 
+    
   }
+  
 
   $(document).ready(function(){
       $("#shareButton").click(function(){

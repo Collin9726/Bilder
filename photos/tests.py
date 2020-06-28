@@ -42,7 +42,6 @@ class LocationTestClass(TestCase):
         self.assertEqual(updated_location.location_name, 'otherPlace')
 
 
-
 class CategoryTestClass(TestCase):
     # Set up method
     def setUp(self):
@@ -81,8 +80,6 @@ class CategoryTestClass(TestCase):
             updated_category = cat
         self.assertEqual(updated_category.category_name, 'otherCategory')
     
-
-
 
 class ImageTestClass(TestCase):
     # Set up method
