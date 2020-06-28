@@ -29,7 +29,16 @@ class ImageTestClass(TestCase):
     # Testing Delete Method
     def test_delete_image_method(self):
         self.this_image.save_image()
-        photo = Image.objects.get(id = 1)
+        photo = Image.objects.get(image_name = 'myimage')
         photo.delete_image()
         photos = Image.objects.all()
         self.assertTrue(len(photos) == 0)
+
+    # Testing Update Method
+    def test_update_image_method(self):
+        self.this_image.save_image()
+        photo = Image.objects.get(image_description = 'messi is back playing football')
+        photo.image_name = 'otherName'
+        photo.update_image()
+        photo_1 = Image.objects.get(image_description = 'messi is back playing football')
+        self.assertEqual(photo_1.image_name, 'otherName')
