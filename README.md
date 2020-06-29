@@ -4,7 +4,7 @@
 
 ### [Bilder app](https://mybilderapp.herokuapp.com/)
 
-<img src="./static/app-images/bilder-home.png"
+<img src="./static/app-images/bilder-img2.png"
      alt="Bilder home image"
      style="width=100%;" />
 
