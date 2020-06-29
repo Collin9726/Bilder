@@ -20,25 +20,27 @@ The app has an admin page through which an account owner is able to upload, upda
 </tr>
 </table> 
 
-#### Latest updated version is on 15th June 2020.
+#### Latest updated version is on 29th June 2020.
 
 ## Technologies used
 
 1. Python v3.6
-2. Flask 1.1.2
+2. Django 3.0.7
 3. Postgres
-4. SQLAlchemy
-5. Flask-Bootstrap
+4. AWS S3 buckets
+5. JavaScript
 6. HTML & CSS
 
 ## Development
 
-The app has been developed with Flask 1.1.2. It uses PostgreSQL database and SQLAlchemy. Database migrations are tracked with ALembic. Email communication uses the Google SMTP server. The app is deployed on Heroku. It's source code is available on GitHub at https://github.com/Collin9726/codescripts
+The app has been developed with Django 3.0.7. It is hosted on Heroku cloud platform. It uses PostgreSQL database for app models data and AWS S3 buckets to store static media files. The app makes use of dependencies as listed on `requirements.txt`. Testcases have been written for all model methods. It's source code is available on GitHub at https://github.com/Collin9726/Bilder
 
 ## Setup & Run instructions
+- Clone the repo to your machine
+- Create and activate a virtual environment
 - Install the dependencies listed on `requirements.txt`.
-- Configure your app to include `SECRET_KEY`, `MAIL_USERNAME`, `MAIL_PASSWORD`, among other environment variables as listed in `start.sh.sample`
-- Run your app on `development` config for debugging purposes.
+- Include a `.env` file that provides `SECRET_KEY`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` among other environment variables as listed in `.env.sample`
+- Run your app on `MODE='dev'` config for debugging purposes.
 
 To contribute to this project on any modules, follow these easy steps:
 
