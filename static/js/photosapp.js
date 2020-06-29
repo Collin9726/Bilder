@@ -1,9 +1,4 @@
-var alertClass = "";
-
-
 function copyFunction(id_value) {
-    alertClass=id_value
-
     /* Get the text field */
     var copyLink = document.getElementById(id_value);
   
