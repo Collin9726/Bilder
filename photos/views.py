@@ -37,7 +37,7 @@ def display_photo(request, photo_id):
     except Image.DoesNotExist:
         raise Http404()
     
-    photo_link=f'http://127.0.0.1:8000/photo/{photo.id}'
+    photo_link=f'https://mybilderapp.herokuapp.com/photo/{photo.id}'
 
     return render(request,"photo.html", {"photo":photo, "categories": categories, "locations": locations, "photo_link": photo_link})
 
