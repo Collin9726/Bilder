@@ -1,6 +1,11 @@
-function copyFunction() {
+var alertClass = "";
+
+
+function copyFunction(id_value) {
+    alertClass=id_value
+
     /* Get the text field */
-    var copyLink = document.getElementById("photoLink");
+    var copyLink = document.getElementById(id_value);
   
     /* Select the text field */
     copyLink.select();
@@ -13,12 +18,8 @@ function copyFunction() {
   
 
   $(document).ready(function(){
-      $("#shareButton").click(function(){
-          $(".copy-alert").empty();
-          $(".copy-alert").append(`<div class="alert alert-dismissible" role="alert">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <p>Image link copied to clipboard!</p>
-                                </div>`);
+      $("button.shareButton").click(function(){
+          alert("Image link has been copied to clipboard!")          
       });     
       
   });

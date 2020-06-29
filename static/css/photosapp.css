@@ -214,9 +214,7 @@ html, body{
     object-fit: cover;
 }
 
-.home-page .card img:hover {
-    opacity: 0.7;
-}
+
 
 .jumbo-photo{
     padding-top: 6em;
@@ -242,3 +240,43 @@ html, body{
     color: rgb(6, 41, 33);
 }
 
+
+
+
+
+.modal {
+    text-align: center;
+}
+
+.modal-body p{
+    font-size: medium;
+}
+
+.modal-body img{
+    height: auto !important;
+}
+  
+@media screen and (min-width: 768px) { 
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-xlg {
+    width: 70%;     
+ }
+
+ .card a:hover{
+     cursor: pointer;
+ }
+
+ 
