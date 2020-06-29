@@ -131,9 +131,7 @@ html, body{
     height: 100%;
 }
 
-.welcome-img{    
-    /* background-image: url('https://i.insider.com/5bec02a948eb1226e361c0a2?width=1100&format=jpeg&auto=webp'); */
-    /* background-image: url('../bg-pics/them.JPG'); */
+.welcome-img{       
     background-image: url('https://i.pinimg.com/originals/fe/1f/55/fe1f55fc6b77ffc0e05cfbf05e3732ea.jpg');
     background-repeat: no-repeat;
     background-position: top center;
@@ -194,8 +192,7 @@ html, body{
     object-fit: cover;
 }
 
-.home-page .jumbotron{
-    /* margin-top: 2em; */
+.home-page .jumbotron{    
     background-color: rgb(227, 238, 237);
 }
 
@@ -226,8 +223,7 @@ html, body{
     background-color: rgb(227, 238, 237);
 }
 
-.jumbo-txt{
-    /* padding-top: 6em; */
+.jumbo-txt{    
     background-color: rgb(214, 233, 231);
 }
 
