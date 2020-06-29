@@ -1,6 +1,4 @@
 .env
 virtual/
 *.pyc
-settings.py
 .vscode
-static/bg-pics

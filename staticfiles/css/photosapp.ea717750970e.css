@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+
+html, body{
+    scroll-behavior: smooth;
+    color: rgb(47, 102, 97);
+    height: 100%;
+    width: 100%;    
+    font-family: 'PT Serif', serif; 
+    background-color: rgb(244, 248, 248);    
+}
+
+.navbar-brand{
+    /* font-family: 'Abril Fatface', cursive; */
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: rgb(47, 102, 97);
+    border-color: rgb(47, 102, 97);
+    border-radius: 0%;
+    margin: 0%;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: rgb(208, 231, 229);
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: rgb(208, 231, 229);
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: rgb(208, 231, 229);
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: rgb(136, 177, 173);
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: rgb(208, 231, 229);
+    background-color: rgb(45, 117, 111);
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: rgb(208, 231, 229);
+    background-color: rgb(45, 117, 111);
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color:rgb(208, 231, 229);
+    border-bottom-color: rgb(208, 231, 229);
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: rgb(136, 177, 173);
+    border-bottom-color: rgb(136, 177, 173);
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: rgb(208, 231, 229);
+    border-bottom-color: rgb(208, 231, 229);
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: rgb(208, 231, 229);
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: rgb(136, 177, 173);
+    }
+
+    .home-page .jumbotron{
+        margin-top: 1em;
+    }
+
+    .welcome-txt,
+    .welcome-txt .jumbotron{
+        margin-top: 0em !important;
+    }
+}
+
+.navbar-form input{
+    background-color: rgb(223, 240, 238);
+    color: rgb(47, 102, 97);
+    border-color: rgb(136, 177, 173);
+}
+
+.navbar-form input::placeholder{
+    color: rgb(47, 102, 97);
+}
+
+.navbar-form button{
+    border-color: rgb(136, 177, 173);
+    color: rgb(208, 231, 229);
+    background-color: rgb(47, 102, 97);
+}
+
+.navbar-form button:hover,
+.navbar-form button:focus{
+    background-color: rgb(45, 117, 111);
+    color: rgb(208, 231, 229);
+    border-color: rgb(136, 177, 173);
+    outline: none;
+}
+
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    height: 100%;
+}
+
+.welcome-img{    
+    /* background-image: url('https://i.insider.com/5bec02a948eb1226e361c0a2?width=1100&format=jpeg&auto=webp'); */
+    /* background-image: url("../bg-pics/them.61446ddec2af.JPG"); */
+    background-image: url('https://i.pinimg.com/originals/fe/1f/55/fe1f55fc6b77ffc0e05cfbf05e3732ea.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;    
+}
+
+.full-height{
+    height: 100%;
+}
+
+.welcome-txt{
+    margin-top: 3.5em;
+    background-color: rgb(208, 231, 229);
+}
+
+.welcome-txt:hover{    
+    background-color: rgb(195, 221, 219);
+}
+
+.welcome-txt .jumbotron{
+    background-color: transparent;
+    margin-top: 30%;
+}
+
+.welcome-txt hr{
+    border-color: rgb(47, 102, 97);  
+    margin: 0em;  
+}
+
+.welcome-txt .btn{
+    background-color: rgb(47, 102, 97); 
+    color: rgb(208, 231, 229);  
+    border-radius: 20%;
+}
+
+.welcome-txt .btn:hover{
+    background-color: rgb(45, 117, 111);     
+}
+
+.welcome-txt button:focus{     
+    outline: none;  
+}
+
+.font-thick{
+    font-weight: bolder;
+}
+
+.home-page .card{
+    color: rgb(45, 117, 111);
+    border: 2px solid rgb(45, 117, 111);
+    padding: 1em;
+    height: 100%;
+}
+
+.home-page .card img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.home-page .jumbotron{
+    /* margin-top: 2em; */
+    background-color: rgb(227, 238, 237);
+}
+
+.home-page h2{
+    font-weight: bolder;
+}
+
+.cards{
+    margin-bottom: 2em;
+}
+
+.photo-page .card{    
+    border: 2px solid rgb(45, 117, 111);
+    padding: 1em;    
+}
+
+.photo-page .card img {
+    width: 100%;    
+    object-fit: cover;
+}
+
+.home-page .card img:hover {
+    opacity: 0.7;
+}
+
+.jumbo-photo{
+    padding-top: 6em;
+    background-color: rgb(227, 238, 237);
+}
+
+.jumbo-txt{
+    /* padding-top: 6em; */
+    background-color: rgb(214, 233, 231);
+}
+
+
+.jumbo-txt p{
+    font-size: medium;
+}
+
+.offscreen {
+    position: absolute;
+    left: -999em;
+}
+
+.alert {    
+    background-color: rgb(164, 192, 192);
+    color: rgb(6, 41, 33);
+}
+
